@@ -31,6 +31,24 @@ You may now go to the root directory and type `bc` to open the project and build
 
 Version 1.00 can be built for either EGA or CGA by changing a constant.  All later versions are specific to one mode.  The constant is `GRMODE` in ID_HEADS.H and ID_ASM.EQU.  Finally ensure that the proper static data files are being linked.  KDREDICT.OBJ/KDREHEAD.OBJ for EGA and KDRCDICT.OBJ/KDRCHEAD.OBJ for CGA.
 
+
+## Project structure
+
+`kd_main.c` is the entry point for the game, initializing the engine and then entering into the demo loop, i.e. `DemoLoop` in `kd_demo.c`.
+
+The main game loop is implemented in `kd_game.c` and is called `GameLoop`.
+
+Files prefixed with `id_` seem to contain the implementation of the game's engine, i.e. the ID engine as it is called.
+
+* id_ca.c/h - CAching manager
+* id_heads.h - Generic defines and typedefs
+* id_in.c/h - INput Manager, handles input devices
+* id_mm.c/h - Memory Manager
+* id_rf.c/h - Perhaps RF stands for ReFresh? Seems to contain drawing/spriting logic
+* id_sd.c/h - Sound Manager
+* id_us.c/h - User Manager - Handles user input and feedback
+* id_vw.c/h - VieW Manager? - Seems to handle lower level screen drawing
+
 ## Revision History
 
 > A little confusing because revisions have proceeded in three different sequences, the regular (EGA) version, the CGA version, and the shareware version.  At present, 1.05 is the latest CGA version, 1.93 is the latest EGA version, and 1.20 is the latest shareware version.  Also, some versions with suffixed letters have been used when text and other items changed without recompilation of the program itself.
