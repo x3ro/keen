@@ -432,7 +432,8 @@ void InitGame (void)
 	}
 #endif
 
-	US_TextScreen();
+//	Shows the shareware screen
+//	US_TextScreen();
 
 	VW_Startup ();
 	RF_Startup ();
@@ -471,7 +472,9 @@ void InitGame (void)
 
 	fontcolor = WHITE;
 
-	US_FinishTextScreen();
+//	Shows the "Press Key to Continue" Message
+//	on the shareware screen
+//	US_FinishTextScreen();
 
 	VW_SetScreenMode (GRMODE);
 	VW_ClearVideo (BLACK);
