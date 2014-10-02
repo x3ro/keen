@@ -355,6 +355,15 @@ void RF_NewMap (void)
 //
 // make a lookup table for the maps left edge
 //
+
+	// XXX It crashes here
+	// It seems to occur because mapbwidthtable has
+	// a size of 128, but somehow the value of mapheight
+	// is much higher (5k - 16k), thus overflowing the array.
+	// I assume that this happens because the assets I'm using
+	// (http://x3ro.de/2014/09/18/keen-dreams-dosbox.html) are
+	// not compatible with the version of the game.
+	// Needs more investigation.
 	spot = 0;
 	for (i=0;i<mapheight;i++)
 	{
