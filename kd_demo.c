@@ -443,16 +443,16 @@ DemoLoop (void)
 	int dissave	= displayofs;
 
 
-#if FRILLS
+#if 1
 //
 // check for launch from ted
 //
-	if (tedlevel)
+	if (true)
 	{
 		NewGame();
-		gamestate.mapon = tedlevelnum;
+		gamestate.mapon = 1;
 		GameLoop();
-		TEDDeath();
+		//TEDDeath();
 	}
 #endif
 
