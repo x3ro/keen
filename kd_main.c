@@ -435,6 +435,11 @@ void InitGame (void)
 //	Shows the shareware screen
 //	US_TextScreen();
 
+	// VW = View?
+	// IN = Input
+	// SD = Sound
+	// US = User
+	// CA = Cache
 	VW_Startup ();
 	RF_Startup ();
 	IN_Startup ();
